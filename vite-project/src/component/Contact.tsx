@@ -1,12 +1,33 @@
 import { CONTACT } from "../constans/index";
-
+import { motion } from "framer-motion";
 const Contact: React.FC = () => {
   return (
     <div className="border-t border-ston-900 pb-20">
-      <h2 className="my-10 text-center txt-4xl">Get in Touch</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="my-10 text-center txt-4xl"
+      >
+        Get in Touch
+      </motion.h2>
       <div className="text-center tracking-tighter ">
-        <p className="my-4">{CONTACT.address}</p>
-        <p className="my-4">{CONTACT.phoneNo}</p>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          className="my-4"
+        >
+          {CONTACT.address}
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          className="my-4"
+        >
+          <a href="callto:+98 905 545 2681"> {CONTACT.phoneNo}</a>
+        </motion.p>
         <a href="#" className="border-b">
           {CONTACT.email}
         </a>

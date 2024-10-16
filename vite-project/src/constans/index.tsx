@@ -1,7 +1,7 @@
 import project1 from "../assets/Screenshot (536).png";
 import project2 from "../assets/Screenshot (537).png";
-import project3 from "../assets/weatherapp.jpg";
-import project4 from "../assets/pizaa.jpg";
+import project3 from "../assets/Screenshot (558).png";
+import project4 from "../assets/Screenshot (557).png";
 
 export const EXPERIENCES = [
   {
@@ -26,7 +26,14 @@ export const PROJECTS = [
     image: project1,
     description:
       "A fully functional restaurant menu with features such as product list, shopping cart, bilingual menu and dark mode. Also, this menu is also used from the API that I made myself...",
-    technologies: ["HTML", "CSS", "tailwind", "js", "React", "typeScript"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "tailwind",
+      "javascript",
+      "React",
+      "typeScript",
+    ],
   },
   {
     title: " PiG-Game",
@@ -35,16 +42,17 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "tailwind", "React", "TypeScript"],
   },
   {
-    title: "Weather app",
-    image: project3,
-    description: "A simple weather program to work with AP in JS",
-    technologies: ["HTML", "CSS", "js", "tailwind"],
-  },
-  {
     title: "pizza website",
-    image: project4,
+    image: project3,
     description: "pizza menu",
     technologies: ["HTML", "CSS", "React"],
+  },
+  {
+    title: "TO Do List",
+    image: project4,
+    description:
+      "A simple to do list JS which has the ability to drag and drop",
+    technologies: ["HTML", "CSS", "javascript"],
   },
 ];
 
