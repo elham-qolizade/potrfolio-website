@@ -24,6 +24,7 @@ export const PROJECTS = [
   {
     title: "Resturant-mnu",
     image: project1,
+
     description:
       "A fully functional restaurant menu with features such as product list, shopping cart, bilingual menu and dark mode. Also, this menu is also used from the API that I made myself...",
     technologies: [
@@ -44,12 +45,14 @@ export const PROJECTS = [
   {
     title: "pizza website",
     image: project3,
-    description: "pizza menu",
+    description: "A simple website for pizza",
+    a: "https://regal-taiyaki-704bbe.netlify.app/",
     technologies: ["HTML", "CSS", "React"],
   },
   {
     title: "TO Do List",
     image: project4,
+    a: "https://to-do-list-js-11.netlify.app/",
     description:
       "A simple to do list JS which has the ability to drag and drop",
     technologies: ["HTML", "CSS", "javascript"],
