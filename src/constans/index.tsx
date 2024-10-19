@@ -9,14 +9,14 @@ export const EXPERIENCES = [
     role: "Frontend Developer",
     company: "DonaWeb",
     description: `Performing examples of reactive and dynamic exercises and working with API`,
-    technologies: ["Javascript", "Html", "Css", "tailwind", "React"],
+    technologies: ["Html", "Css", "tailwind", "Javascript", "React"],
   },
   {
     year: "February2023 - February 2024",
     role: "Javascript Developer",
     company: "Alpha startup",
     description: `Passing a training course and doing projects related to website design and solving JavaScript problems to get more into JavaScript.Open-Sourced Projects`,
-    technologies: ["Javascript", "Html", "Css", "tailwind"],
+    technologies: ["Html", "Css", "tailwind", "Javascript"],
   },
 ];
 
