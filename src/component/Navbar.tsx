@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
           {" "}
           <FaInstagram />
         </a>
-        <a>
+        <a href="https://www.linkedin.com/in/elham-qolizadeh-043131334/">
           <FaLinkedin />
         </a>
       </div>
