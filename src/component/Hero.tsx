@@ -46,13 +46,13 @@ const Hero: React.FC = () => {
           >
             <motion.h2
               variants={childVariants}
-              className="pb-2 text-4xl tracking-tighter lg:tex-8xl "
+              className="pb-2 text-4xl font-semibold lg:tex-8xl  tracking-normal  "
             >
               Elham Gholizade Mahali
             </motion.h2>
             <motion.span
               variants={childVariants}
-              className="text-3xl text-transparent bg-gradient-to-r from-stone-300 to-slate-600 bg-clip-text tracking-light"
+              className="text-3xl font-medium text-transparent bg-gradient-to-r from-stone-300 to-slate-600 bg-clip-text tracking-light"
             >
               Junior frontend developer
             </motion.span>

@@ -8,7 +8,7 @@ const Project: React.FC = () => {
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-4xl text-center"
+        className="my-20 text-[40px] text-center tracking-normal"
       >
         Project
       </motion.h2>
@@ -38,11 +38,13 @@ const Project: React.FC = () => {
               className="w-full max-w-xl lg:w-3/4"
             >
               {" "}
-              <h3 className="mb-2 text-2xl font-semibold">{project.title}</h3>
+              <h3 className="mb-2 text-2xl font-semibold tracking-normal ">
+                {project.title}
+              </h3>
               <p className="mb-4 text-stone-400">{project.description}</p>
               {project.technologies.map((tech, index) => (
                 <span
-                  className="p-2 mr-2 text-sm font-medium rounded bg-stone-900 text-stone-300"
+                  className="p-2 mr-2 tracking-wide text-sm font-medium rounded bg-stone-900 text-stone-300"
                   key={index}
                 >
                   {tech}

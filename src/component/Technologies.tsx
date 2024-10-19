@@ -28,7 +28,7 @@ const Technologies: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-4xl text-center"
+        className="my-20 text-4xl text-center tracking-normal font-medium"
       >
         Technologies
       </motion.h2>

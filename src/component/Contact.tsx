@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="my-10 text-center txt-4xl"
+        className="my-10 text-center txt- "
       >
         Get in Touch
       </motion.h2>
