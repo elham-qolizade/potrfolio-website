@@ -24,9 +24,9 @@ export const PROJECTS = [
   {
     title: "Resturant-mnu",
     image: project1,
-
+    a: "https://menu-resturant-y37p.vercel.app/",
     description:
-      "A fully functional restaurant menu with features such as product list, shopping cart, bilingual menu and dark mode. Also, this menu is also used from the API that I made myself...",
+      "A fully functional restaurant menu with features such as product list, shopping cart...",
     technologies: ["HTML", "CSS", "tailwind", "React", "TypeScript"],
   },
   {

@@ -18,6 +18,10 @@ const childVariants = {
   hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
+const downloadFile = () => {
+  const url = "/src/component/Elham qolizade.pdf";
+  window.open(url, "_blank");
+};
 
 const Hero: React.FC = () => {
   return (
@@ -69,7 +73,8 @@ const Hero: React.FC = () => {
             </motion.p>
             <motion.a
               variants={childVariants}
-              className="p-4 mb-10 text-sm bg-white rounded-full text-stone-800"
+              onClick={downloadFile}
+              className="p-4 mb-10 text-sm cu   bg-white rounded-full text-stone-800"
             >
               Download Resume
             </motion.a>

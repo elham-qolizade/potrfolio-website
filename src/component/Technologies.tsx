@@ -6,10 +6,21 @@ import { SiTypescript } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { IoLogoJavascript } from "react-icons/io5";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const iconvariants = (duration) => ({
-  initial: { y: -10 },
+interface IconVariants {
+  [key: string]: {
+    y: number | number[];
+    transition: {
+      duration: number;
+      ease: string;
+      repeat: number;
+      repeatType: string;
+    };
+  };
+}
+
+const iconvariants = (duration: number): IconVariants => ({
   animate: {
     y: [10, -10],
     transition: {
@@ -21,14 +32,18 @@ const iconvariants = (duration) => ({
   },
 });
 
+const duration = 2.5; // مدت زمان مورد نظر
+
+const variants = iconvariants(duration);
+
 const Technologies: React.FC = () => {
   return (
     <div className="pb-24">
       <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 1.5 }}
-        className="my-20 text-4xl text-center tracking-normal font-medium"
+        variants={variants as Variants}
+        initial="initial"
+        animate="animate"
+        className="my-20 text-4xl font-medium tracking-normal text-center"
       >
         Technologies
       </motion.h2>
@@ -41,55 +56,51 @@ const Technologies: React.FC = () => {
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
-          {" "}
           <AiOutlineHtml5 className="text-orange-700 text-7xl " />
         </motion.div>
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
-          {" "}
           <FaCss3Alt className="text-blue-600 text-7xl" />
         </motion.div>
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
-          {" "}
           <TbBrandTailwind className="text-7xl text-cyan-400" />
         </motion.div>
 
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
-          {" "}
           <IoLogoJavascript className="text-yellow-400 text-7xl" />
         </motion.div>
 
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
           <RiReactjsLine className="text-7xl text-cyan-400" />
         </motion.div>
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
           <SiTypescript className="text-7xl text-cyan-800" />
         </motion.div>
         <motion.div
           initial="initial"
           animate="animate"
-          variants={iconvariants(2.5)}
+          variants={iconvariants(2.5) as Variants}
         >
           <TbBrandFramerMotion className="text-pink-600 text-7xl" />
         </motion.div>
