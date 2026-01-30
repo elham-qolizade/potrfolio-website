@@ -1,83 +1,90 @@
 import React from "react";
-import Profile from "../assets/photo_2024-10-04_20-58-31.jpg";
+import Profile from "../assets/photo_2026-01-30_14-34-01.jpg";
 import { motion } from "framer-motion";
 
-const containerVaiants = {
-  hidden: { opacity: 0, x: -100 },
+// اصلاح غلط املایی و بهینه‌سازی زمان انیمیشن‌ها
+const containerVariants = {
+  hidden: { opacity: 0, x: -50 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.5,
-      staggerChildren: 0.5,
+      duration: 0.6,
+      staggerChildren: 0.2, // ایجاد افکت پله‌ای برای فرزندان
     },
   },
 };
 
 const childVariants = {
-  hidden: { opacity: 0, x: -100 },
+  hidden: { opacity: 0, x: -30 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-};
-const downloadFile = () => {
-  const url = "/src/component/Elham qolizade.pdf";
-  window.open(url, "_blank");
 };
 
 const Hero: React.FC = () => {
+  // const downloadFile = () => {
+  //   // نکته: فایل PDF رو تو پوشه public بذار تا مستقیم در دسترس باشه
+  //   const url = "/Elham-Gholizade-Resume.pdf";
+  //   window.open(url, "_blank");
+  // };
+
   return (
     <div className="pb-4 lg:mb-36">
       <div className="flex flex-wrap lg:flex-row-reverse">
+        {/* بخش تصویر */}
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center pb-8 lg:mt-10">
             <motion.img
               src={Profile}
-              className="w-[350px]  border rounded-3xl border-stone-900"
-              alt=""
-              width={650}
-              height={650}
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.5 }}
+              className="w-[350px] border-2 rounded-3xl border-stone-800 shadow-xl"
+              alt="T-Rex Profile"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             />
           </div>
         </div>
+
+        {/* بخش متون */}
         <div className="w-full lg:w-1/2">
           <motion.div
             initial="hidden"
             animate="visible"
-            variants={containerVaiants}
+            variants={containerVariants}
             className="flex flex-col items-center mt-10 lg:items-start"
           >
             <motion.h2
               variants={childVariants}
-              className="pb-2 text-4xl font-semibold lg:tex-8xl  tracking-normal  "
+              className="pb-4 text-3xl font-bold tracking-tight lg:text-5xl"
             >
-              Elham Gholizade Mahali
+              Elham gholizade mahali
             </motion.h2>
+
             <motion.span
               variants={childVariants}
-              className="text-3xl font-medium text-transparent bg-gradient-to-r from-stone-300 to-slate-600 bg-clip-text tracking-light"
+              className="text-3xl font-semibold text-transparent bg-gradient-to-r from-stone-300 to-slate-500 bg-clip-text"
             >
-              Junior frontend developer
+              Front-end Developer
             </motion.span>
+
             <motion.p
               variants={childVariants}
-              className="max-w-lg py-6 my-2 text-xl leading-relaxed tracking-tighter"
+              className="max-w-xl py-6 my-2 text-lg font-light leading-relaxed text-stone-400 text-center lg:text-left"
             >
-              I am an enthusiastic and detail-oriented young developer with 2
-              years of hands-on experience and skilled knowledge looking to use
-              my technical and specialized skills to provide value to the client
-              and contribute to successful projects today and in the future.
-              Aiming to tackle new challenges and use coding and debugging
-              skills to develop new features and improve the experience
+              As a Computer Science student and a dedicated Front-end Developer
+              with **4 years of hands-on experience**, I specialize in building
+              high-performance web applications using **Next.js** and
+              **TypeScript**. I am passionate about bridging the gap between
+              complex backend logic and pixel-perfect frontend interfaces,
+              ensuring clean, scalable, and maintainable code in every project.
             </motion.p>
-            <motion.a
+
+            {/* <motion.button
               variants={childVariants}
               onClick={downloadFile}
-              className="p-4 mb-10 text-sm cu   bg-white rounded-full text-stone-800"
+              className="px-8 py-4 mb-10 text-sm font-medium tracking-wide transition-all bg-white rounded-full text-stone-900 hover:bg-stone-200 active:scale-95"
             >
               Download Resume
-            </motion.a>
+            </motion.button> */}
           </motion.div>
         </div>
       </div>
@@ -86,3 +93,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
