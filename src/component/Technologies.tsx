@@ -80,14 +80,14 @@ const Technologies: React.FC = () => {
         </motion.div>
 
         {/* Tailwind */}
-        <motion.div
+        {/* <motion.div
           initial="initial"
           animate="animate"
           variants={iconVariants(2.2)}
           className="p-4 border-4 rounded-2xl border-stone-800"
         >
           <TbBrandTailwind className="text-7xl text-cyan-400" />
-        </motion.div>
+        </motion.div> */}
 
         {/* Framer Motion */}
         <motion.div
