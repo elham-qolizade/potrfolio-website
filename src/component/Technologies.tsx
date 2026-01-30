@@ -1,9 +1,9 @@
 import React from "react";
 import { RiReactjsLine, RiNextjsFill } from "react-icons/ri"; // اضافه کردن Next.js
 import { TbBrandTailwind, TbBrandFramerMotion } from "react-icons/tb";
-import { AiOutlineHtml5 } from "react-icons/ai";
+
 import { SiTypescript, SiGreensock } from "react-icons/si"; // اضافه کردن GSAP
-import { FaCss3Alt } from "react-icons/fa";
+
 import { IoLogoJavascript } from "react-icons/io5";
 import { motion, Variants } from "framer-motion";
 
@@ -80,14 +80,14 @@ const Technologies: React.FC = () => {
         </motion.div>
 
         {/* Tailwind */}
-        {/* <motion.div
+        <motion.div
           initial="initial"
           animate="animate"
           variants={iconVariants(2.2)}
           className="p-4 border-4 rounded-2xl border-stone-800"
         >
           <TbBrandTailwind className="text-7xl text-cyan-400" />
-        </motion.div> */}
+        </motion.div>
 
         {/* Framer Motion */}
         <motion.div
